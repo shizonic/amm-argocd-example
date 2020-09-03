@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/instance: argo-example-hannelore02-forked
+  name: example-php-docker-helloworld-forked
+spec:
+  port:
+    targetPort: 8080
+  to:
+    kind: ""
+    name: example-php-docker-helloworld-forked
+    weight: null
+status: {}
