@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example-php-docker-helloworld
+  name: example-php-docker-helloworld-forked
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: example-php-docker-helloworld
+      app: example-php-docker-helloworld-forked
   template:
     metadata:
       labels:
-        app: example-php-docker-helloworld
+        app: example-php-docker-helloworld-forked
     spec:
       containers:
       - image: appuio/example-php-docker-helloworld
-        name: example-php-docker-helloworld
+        name: example-php-docker-helloworld-forked
         ports:
         - containerPort: 8080
